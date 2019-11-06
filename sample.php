@@ -1,7 +1,16 @@
 <?php
 $result = '無し';
 
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    if(isset($_POST['btn']) === true){
+        $result = omikuji();
+    }
+}
 
+function omikuji(){
+    $omikuji = ['大吉', '中吉', '吉', '小吉', '凶', '大凶'];
+    return $omikuji[rand(0, count($omikuji) - 1)];
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
