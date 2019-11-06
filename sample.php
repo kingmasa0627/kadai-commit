@@ -1,3 +1,8 @@
+<?php
+$result = '無し';
+
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -12,7 +17,7 @@
     </head>
     <body>
         <h1>おみくじプログラム</h1>
-        
+        <p>おみくじの結果：<?php echo htmlentities($result, ENT_QUOTES, 'UTF-8'); ?></p>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <button type="submit" name="btn" class="btn btn-primary" value="draw">おみくじを引く</button>
         </form>
